@@ -1,17 +1,16 @@
+
 fh = open("/Users/lavanya/Documents/GitHub/advent_of_code/q2/input.txt", "r")
 fhread = fh.readlines()
 
 sums = 0
-red = 12
-green = 13
-blue = 14
 
 for i in fhread:
     games = i.split(":")
-    game_num = int((games[0].split(" "))[1])
     allsets = games[1]
     sets_lst = allsets.split(";")
-    print(sets_lst)
+    blue = 0
+    red = 0
+    green = 0
     for j in sets_lst:
         d = {"red":0, "blue": 0, "green": 0}
         comp = j.split(",")
@@ -21,10 +20,17 @@ for i in fhread:
             color = final[1].rstrip("\n")
             num = int(final[0])
             d[color] += num 
-        if d["red"] > red or d["blue"] > blue or d["green"] > green:
-            break
-    else:
-        sums += game_num
+        if d["red"] > red:
+            red = d["red"]
+        
+        if d["blue"] > blue:
+            blue = d["blue"]
+
+        if d["green"] > green:
+            green = d["green"]
+    power = red * green * blue
+    sums += power
+    
         
 
 print(sums)
