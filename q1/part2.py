@@ -37,4 +37,5 @@ for i in fhread:
 
 print(sums)
 
+fh.close()
 

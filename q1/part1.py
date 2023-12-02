@@ -11,3 +11,5 @@ for i in fhread:
     sum = sum + number
 
 print(sum)
+
+fh.close()
