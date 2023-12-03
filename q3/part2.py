@@ -1,4 +1,5 @@
 # disclaimer: my solution assumes that the numbers around a gear are all unique
+# one important thing here is to know that any number adjacent to the gear is def a part number
 
 fh = open("/Users/lavanya/Documents/GitHub/advent_of_code/q3/input.txt", "r")
 fhread = fh.readlines()
