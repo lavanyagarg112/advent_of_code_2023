@@ -1,6 +1,6 @@
 import re
 
-fh = open("/Users/lavanya/Documents/GitHub/advent_of_code/q1/input.txt", "r")
+fh = open("/Users/lavanya/Documents/GitHub/advent_of_code_2023/q1/input.txt", "r")
 fhread = fh.readlines()
 sums = 0
 

@@ -1,5 +1,5 @@
 
-fh = open("/Users/lavanya/Documents/GitHub/advent_of_code/q3/input.txt", "r")
+fh = open("/Users/lavanya/Documents/GitHub/advent_of_code_2023/q3/input.txt", "r")
 fhread = fh.readlines()
 rows = len(fhread)
 cols = len(fhread[0])-1

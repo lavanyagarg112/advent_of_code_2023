@@ -1,5 +1,5 @@
 
-fh = open("/Users/lavanya/Documents/GitHub/advent_of_code/q2/input.txt", "r")
+fh = open("/Users/lavanya/Documents/GitHub/advent_of_code_2023/q2/input.txt", "r")
 fhread = fh.readlines()
 
 sums = 0
