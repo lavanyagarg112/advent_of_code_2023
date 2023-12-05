@@ -76,7 +76,7 @@ totemperature = maps(temp_lst)
 tohumidity = maps(humid_lst)
 tolocation = maps(loc_lst)
 
-all_locations = []
+min_location = "start"
 
 def get_value(d, elem):
     final = 0
@@ -103,10 +103,12 @@ for j in seeds:
         temp = get_value(totemperature, light)
         humid = get_value(tohumidity, temp)
         location = get_value(tolocation, humid)
-        all_locations.append(location)
+        if min_location == "start" or location < min_location:
+            min_location = location
+
     
 
-print(min(all_locations))
+print(min_location)
 
 
 fh.close()
