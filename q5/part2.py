@@ -8,7 +8,7 @@ tbh can start from bigger number but why take the risk
 
 check if there is a reverse mapping to the seed number
 check for all
-as soon as one hits
+as soon as one hits the seed number
 thats the smallest location
 '''
 
