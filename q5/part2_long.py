@@ -1,3 +1,6 @@
+
+# takes too long to run 
+
 fh = open("/Users/lavanya/Documents/GitHub/advent_of_code_2023/q5/input.txt", "r")
 fhread = fh.readlines()
 
@@ -47,14 +50,6 @@ for k in superlst:
     new_superlst.append(k)
 
 
-soil_lst = new_superlst[0]
-ferti_lst = new_superlst[1]
-water_lst = new_superlst[2]
-light_lst = new_superlst[3]
-temp_lst = new_superlst[4]
-humid_lst = new_superlst[5]
-loc_lst = new_superlst[6]
-
 def maps(lst):
     d = {}
     for i in lst:
@@ -68,13 +63,13 @@ def maps(lst):
 
 
 
-tosoils = maps(soil_lst)
-tofertilisers = maps(ferti_lst)
-towater = maps(water_lst)
-tolight = maps(light_lst)
-totemperature = maps(temp_lst)
-tohumidity = maps(humid_lst)
-tolocation = maps(loc_lst)
+tosoils = maps(new_superlst[0])
+tofertilisers = maps(new_superlst[1])
+towater = maps(new_superlst[2])
+tolight = maps(new_superlst[3])
+totemperature = maps(new_superlst[4])
+tohumidity = maps(new_superlst[5])
+tolocation = maps(new_superlst[6])
 
 min_location = "start"
 
