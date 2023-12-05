@@ -90,40 +90,20 @@ def get_value(d, elem):
         final = elem
 
     return final
+  
 
-def search_min(d, tup):
-    final = 0
-    start = tup[0]
-    end = tup[1]
-    if start == end:
-        return start
-    for j in d:
-        if start >= j[0] and start <= j[1]:
-            final = d[j] + start - j[0]
-            if end <= j[1]:
-                return final
-            else:
-                new_start = j[1] + 1
-            break 
-    else:
-        new_start = start + 1
-
-    new_min = search_min(d, (new_start, end))
-    return min(start, new_min)
-    
-
-
-
-
-for i in seeds:
-    soil = search_min(tosoils, i)
-    fertiliser = get_value(tofertilisers, soil)
-    water = get_value(towater, fertiliser)
-    light = get_value(tolight, water)
-    temp = get_value(totemperature, light)
-    humid = get_value(tohumidity, temp)
-    location = get_value(tolocation, humid)
-    all_locations.append(location)
+for j in seeds:
+    start = j[0]
+    end = j[1]
+    for i in range(start,end+1):
+        soil = get_value(tosoils, i)
+        fertiliser = get_value(tofertilisers, soil)
+        water = get_value(towater, fertiliser)
+        light = get_value(tolight, water)
+        temp = get_value(totemperature, light)
+        humid = get_value(tohumidity, temp)
+        location = get_value(tolocation, humid)
+        all_locations.append(location)
     
 
 print(min(all_locations))
