@@ -14,7 +14,7 @@ def clean(lst):
 instructions = fhread[0].rstrip("\n")
 nodes = clean(fhread[1:])
 node_dict = {}
-start = ""
+start = "AAA"
 
 
 for i in nodes:
@@ -22,8 +22,7 @@ for i in nodes:
     maps = comp[1].strip("()")
     maps = maps.split(", ")
     node_dict[comp[0]] = (maps[0], maps[1])
-    if start == "":
-        start = comp[0]
+
 
 steps = 0
 
