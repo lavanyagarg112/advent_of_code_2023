@@ -25,12 +25,20 @@ def four_of_a_kind(s):
     strings = list( dict.fromkeys(mylist) )
     if ("J" in mylist and len(strings) == 3) or len(strings) == 2:
         count1 = 0
+        count2 = 0
         for i in s:
             if i == strings[0] or i == "J":
                 count1 += 1
-        if count1 == 4 or count1 == 1:
+        if count1 == 4:
             return True 
-        return False
+        else:
+            for i in s:
+                if i == strings[1] or i == "J":
+                    count2 += 1
+            if count2 == 4:
+                return True 
+            else:
+                return False
     else:
         return False
 
@@ -137,6 +145,7 @@ threef = sortlst(three)
 fullf = sortlst(full)
 fourf = sortlst(four)
 fivef = sortlst(five)
+print(fourf)
 
 final = []
 final.extend(highf)
