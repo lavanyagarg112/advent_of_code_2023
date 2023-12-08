@@ -171,6 +171,8 @@ for i in range(len(final)):
     rank = i + 1
     bid = d[hand]
     prod = rank * bid
+
+    print(hand, rank, bid, prod)
     sums += prod
 
 print(sums)
