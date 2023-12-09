@@ -1,15 +1,6 @@
 
-'''
-Correct Answer:
-248256639
-
-My code gives:
-248378758
-'''
-
 fh = open("/Users/lavanya/Documents/GitHub/advent_of_code_2023/q7/input.txt", "r")
 fhread = fh.readlines()
-
 
 def clean(lst):
     xs = []
@@ -69,6 +60,7 @@ def three_of_a_kind(s): # can give true for a full house as well but i check for
     count1 = 0
     count2 = 0
     count3 = 0
+    count4 = 0
     for i in s:
         if i == strings[0] or i == "J":
             count1 += 1
@@ -78,8 +70,13 @@ def three_of_a_kind(s): # can give true for a full house as well but i check for
     for i in s:
         if i == strings[2] or i =="J":
             count3 += 1 
+
+    if len(strings) > 3:
+        for i in s:
+          if i == strings[3] or i =="J":
+              count4 += 1 
     
-    if count1 == 3 or count2 == 3 or count3 == 3:
+    if count1 == 3 or count2 == 3 or count3 == 3 or count4 == 3:
         return True 
     return False
 
@@ -148,6 +145,13 @@ def sortlst(lst):
                     break 
     return lst
 
+print(high)
+print(one)
+print(two)
+print(three)
+print(full)
+print(four)
+print(five)
 
 
 highf = sortlst(high)
