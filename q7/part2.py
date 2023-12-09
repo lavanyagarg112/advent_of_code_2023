@@ -1,6 +1,7 @@
 fh = open("/Users/lavanya/Documents/GitHub/advent_of_code_2023/q7/input.txt", "r")
 fhread = fh.readlines()
 
+
 def clean(lst):
     xs = []
     for i in lst:
@@ -125,7 +126,7 @@ for i in fhread:
         high.append(s)
 
 
-strength = {"A": 13, "K": 12, "Q":11,"J":0,"T":9,"9":8,"8":7,"7":6,"6":5,"5":4,"4":3,"3":2,"2":1}
+strength = {"A": 13, "K": 12, "Q":11,"J":-1,"T":9,"9":8,"8":7,"7":6,"6":5,"5":4,"4":3,"3":2,"2":1,"1":0}
 def sortlst(lst):
     for i in range(len(lst)-1):
         for j in range(len(lst)-i-1):
@@ -171,10 +172,9 @@ for i in range(len(final)):
     rank = i + 1
     bid = d[hand]
     prod = rank * bid
-
-    print(hand, rank, bid, prod)
     sums += prod
 
 print(sums)
+
 
 fh.close()
