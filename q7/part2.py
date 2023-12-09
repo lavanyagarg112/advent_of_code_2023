@@ -54,7 +54,7 @@ def four_of_a_kind(s):
     else:
         return False
 
-def full_house(s):
+def full_house(s): # can give true for four of a kind but comes here only if that fails
     mylist = list(s)
     mylist = list( dict.fromkeys(mylist) )
 
@@ -63,7 +63,7 @@ def full_house(s):
     else:
         return False
     
-def three_of_a_kind(s):
+def three_of_a_kind(s): # can give true for a full house as well but i check for full house first, and come here only if that fails
     mylist = list(s)
     strings = list( dict.fromkeys(mylist) )
     count1 = 0
@@ -83,7 +83,7 @@ def three_of_a_kind(s):
         return True 
     return False
 
-def two_pair(s):
+def two_pair(s): # can give true for three of a kind but comes here only after that fails
     mylist = list(s)
     mylist = list( dict.fromkeys(mylist) )
 
@@ -92,7 +92,7 @@ def two_pair(s):
     else:
         return False
     
-def one_pair(s):
+def one_pair(s): # can give true for two pair but comes here only after that fails
     mylist = list(s)
     strings = list( dict.fromkeys(mylist) )
 
@@ -135,7 +135,7 @@ for i in fhread:
         high.append(s)
 
 
-strength = {"A": 13, "K": 12, "Q":11,"J":-1,"T":9,"9":8,"8":7,"7":6,"6":5,"5":4,"4":3,"3":2,"2":1,"1":0}
+strength = {"A": 13, "K": 12, "Q":11,"J":0,"T":9,"9":8,"8":7,"7":6,"6":5,"5":4,"4":3,"3":2,"2":1} # J made weakest
 def sortlst(lst):
     for i in range(len(lst)-1):
         for j in range(len(lst)-i-1):
@@ -158,22 +158,7 @@ fullf = sortlst(full)
 fourf = sortlst(four)
 fivef = sortlst(five)
 
-print(highf)
-print(onef)
-print(twof)
-print(threef)
-print(fullf)
-print(fourf)
-print(fivef)
-
-final = []
-final.extend(highf)
-final.extend(onef)
-final.extend(twof)
-final.extend(threef)
-final.extend(fullf)
-final.extend(fourf)
-final.extend(fivef)
+final = highf + onef + twof + threef + fullf + fourf + fivef
 
 sums = 0
 for i in range(len(final)):
