@@ -24,7 +24,7 @@ rows = len(matrix)
 cols = len(matrix[0])
 start_pos = 0
 
-tiles = 0
+# not done
 
 def check(current, direction):
     if current[0] < 0 or current[1] < 0 or current[0] >= rows or current[1] >= cols:

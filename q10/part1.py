@@ -39,7 +39,7 @@ def check(current, direction):
         checkdir = (r-1, c)
     else:
         checkdir = (r+1, c)
-
+ 
 
     if "start" in dir[matrix[r][c]]:
         if direction == "east":
